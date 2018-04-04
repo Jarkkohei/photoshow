@@ -3,7 +3,7 @@
 @section('content')
     <h3>{{ $photo->title }}</h3>
     <p>{{ $photo->description }}</p>
-    <a href="/albums/{{ $photo->album_id }}">Back to Gallery</a>
+    <a class="button secondary" href="/albums/{{ $photo->album_id }}">Back to Gallery</a>
     <hr>
     <img src="/storage/photos/{{ $photo->album_id }}/{{ $photo->photo }}" alt="{{ $photo->title }}">
     <br>
@@ -15,5 +15,5 @@
         {{-- Form::hidden('_method', 'DELETE') --}}
     {!! Form::close() !!}
     <hr>
-    <small>Size: {{ $photo->size }}</small>
+    <small>Size: {{ $photo->size }} bytes</small>
 @endsection

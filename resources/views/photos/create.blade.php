@@ -2,6 +2,7 @@
 
 @section('content')
     <h3>Upload Photo</h3>
+    <a class="button secondary" href="/albums/{{ $album_id }}">Back to Gallery</a>
     {!! Form::open(['action' => 'PhotosController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         {{ Form::text('title', '', ['placeholder' => 'Photo Title']) }}
         {{ Form::textarea('description', '', ['placeholder' => 'Photo Description']) }}
